@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class HeadOrTails {
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter guess of 0 or 1 (0: heads, 1: tails)");
+		int guess = sc.nextInt();
+		
+		int coin = (int)(Math.random()*2);
+		
+		if (guess == coin) {
+			System.out.println("You guessed it!");
+		}
+		else if (guess == 0 || guess == 1) {
+			if (coin != 0) {
+				System.out.println("The coin is 1 (tails) - Better luck next time");
+			}
+			else if (coin != 1) {
+				System.out.println("The coin is 0 (heads) - Better luck next time");
+			}
+		}
+		else {
+			System.out.println("Invalid input!");
+		}
+		
+		
+	}
+
+}
